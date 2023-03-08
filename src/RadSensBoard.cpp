@@ -42,7 +42,7 @@ bool RadSensBoard::init()
 /* Reads data from the RadSens board. */
 bool RadSensBoard::readData()
 {
-    Wire.requestFrom(_boardAddress, sizeof(_rawData));
+    Wire.requestFrom(_boardAddress, (uint8_t)sizeof(_rawData));
 
     for (int i = 0; i < sizeof(_rawData); i++)
     {
